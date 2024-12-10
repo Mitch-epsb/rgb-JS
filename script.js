@@ -56,6 +56,20 @@ function runpre() {
 function rundis() {
   let w = +pwidth.value;
   let h = +pheight.value;
+   if (w < 50) {
+    w = 50;
+    pwidth.value = 50;
+  } else if (w > 400) {
+    w = 400;
+    pwidth.value = 400;
+  }
+  if (h < 50) {
+    h = 50;
+    pheight.value = 50;
+  } else if (h > 200) {
+    h = 200;
+    pheight.value = 200;
+  }
   dis.style.width = w + "px";
   dis.style.height = h + "px";
   console.log(w);
